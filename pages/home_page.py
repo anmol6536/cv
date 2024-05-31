@@ -117,8 +117,9 @@ def send_message():
 
     yag = yagmail.SMTP(st.secrets.get('contact_mail').get("email_address"),
                        st.secrets.get('contact_mail').get("email_password"))
+    replace_this = f"{first_name} {last_name} tried to contact you"
     contents = [
-        f"{first_name} {last_name} tried to contact you",
+        "{replace_this}",
         "",
         f"User E-Mail: {st.session_state.get('user_email')}",
         "Message:",
@@ -130,9 +131,11 @@ def send_message():
 
     yag.send(st.secrets.get('contact_mail').get("email_address"),
              subject,
-             deepcopy(contents))
+             deepcopy(contents).format(dict(replace_this=replace_this)))
+
+    replace_this = "You tried to contact Anmol Gorakshakar"
     yag.send(st.session_state.get('user_email'),
              subject,
-             "REFERENCE:\n" + deepcopy(contents))
+             "REFERENCE:\n" + deepcopy(contents).format(dict(replace_this=replace_this)))
     del contents
     st.info("Message Sent")

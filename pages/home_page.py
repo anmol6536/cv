@@ -125,11 +125,13 @@ def send_message():
     ]
     contents = "\n".join(iter(contents))
     ticket_id = uuid4()
+    subject = f'Message from HOMEWEBSITE ({ticket_id})'
+
     yag.send(st.secrets.get('contact_mail').get("email_address"),
-             f'Message from HOMEWEBSITE ({ticket_id})',
+             subject,
              contents)
     yag.send(st.session_state.get('user_email'),
-             f'Message from HOMEWEBSITE ({ticket_id})',
-             ["REFERENCE:", contents])
+             subject,
+             "REFERENCE:\n" + contents)
 
     st.info("Message Sent")

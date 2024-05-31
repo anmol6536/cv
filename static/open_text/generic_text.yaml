@@ -1,0 +1,96 @@
+personal_info:
+  name: "Anmol Gorakshakar"
+  initials: "AG"
+  title: "Scientist Systems Biology"
+  affiliation: "Viome Life Sciences"
+  education: "MS Biotechnology"
+  professional_experience: "5 years"
+  status: "Full-time"
+  location: "New York, NY"
+  fields_of_interest:
+    - "Microbiome"
+    - "Systems Biology"
+    - "Bioinformatics"
+    - "Machine Learning"
+    - "Software Development"
+    - "Data Science"
+    - "Genomics"
+    - "Metagenomics"
+  profile_urls:
+    - github: "https://github.com/anmol6536"
+    - linkedin: "https://www.linkedin.com/in/anmol-gorakshakar/"
+    - facebook: null
+    - twitter: null
+    - instagram: null
+  contact: "+1 646-643-6745"
+  short_bio: "I am a Scientist and Python developer with over four years of programming and three years of molecular biology experience.
+   My expertise are in fields of computational biology, early drug discovery, biomarker discovery, and high throughput data analysis, knowledge-base creation.
+   I have extensive experience in NGS data handling / analysis, biological data handling, writing python packages, 
+   working in CI/CD environments, git and relational database creation and experience in UNIX Shell scripting. 
+   Along with significant programming experience I have also extensive wet lab experience which makes me an ideal 
+   candidate for communicating with biologists and chemists as well as development team"
+
+recent_publications:
+  - title: "TOR kinase activity in Chlamydomonas reinhardtii is modulated by cellular metabolic states"
+    authors: "Shivani Upadhyaya, Shreya Agrawal, **Anmol Gorakshakar**, Basuthkar Jagadeeshwar Rao"
+    journal: "FEBS Letters"
+    year: 2020
+    url: "https://doi.org/10.1002/1873-3468.13888"
+  - title: "Microbial functional pathways based on metatranscriptomic profiling enable effective saliva-based health assessments for precision wellness"
+    authors: "Eric Patridge, **Anmol Gorakshakar**, Matthew M. Molusky, Oyetunji Ogundijo, Angel Janevski, Cristina Julian, Lan Hu, Momchilo Vuyisich, Guruduth Banavar"
+    journal: "Computational and Structural Biotechnology Journal"
+    year: 2024
+    url: "https://doi.org/10.1016/j.csbj.2024.01.018"
+  - title: "The effectiveness of precision supplements on depression symptoms in a US population"
+    authors: "Cristina Julian, Nan Shen, Matthew Molusky, Lan Hu, Vishakh Gopu, **Anmol Gorakshakar**, Eric Patridge, Grant Antoine, Janelle Connell, Hilary Keiser, Uma Naidoo, Momchilo Vuyisich, Guruduth Banavar"
+    journal: "MedRxiv (Submitted to Nature Scientific Reports)"
+    year: 2023
+    url: "https://doi.org/10.1101/2023.04.18.23288750"
+  - title: "Altered gut microbial functional pathways in people with Irritable Bowel Syndrome enable precision health insights"
+    authors: "Eric Patridge, **Anmol Gorakshakar**, Matthew M. Molusky, Oyetunji Ogundijo, Cristina Julian, Lan Hu, Grant Antoine, Momchilo Vuyisich, Robert Wohlman, and Guruduth Banavar"
+    journal: "BioRxiv (Submitted to Microorganisms)"
+    year: 2023
+    url: "https://doi.org/10.1101/2024.02.15.580548"
+
+professional_journey:
+  internships:
+    - title:
+      institution: "Tata Institute of Fundamental Research"
+      start:
+      end:
+      abstract: "Studied mechanistic Target of Rapamycin in C. reinhardtii with respect to survival and nutrient starvation, elucidated a potential pathway for its regulation, established a direct correlation between carbon nitrogen balance and confirmed the role of light in cell survival."
+    - title:
+      institution: "New York University Silverman School of Dentistry"
+      start:
+      end:
+      abstract:
+    - title: "Identification of novel surface epitopes "
+      institution: "New York University Tisch School of Medicine"
+      start:
+      end:
+      abstract: "Identified 7 novel epitopes on Surface Proteins of S. aureus using molecular docking, ab-initio folding. Increased the solubility of the epitopes for invitro analysis without losing structural integrity."
+  full_time:
+    - title: "Research Scientist"
+      institution: "GeneCentrix"
+      start: "2019-12-06"
+      end: "2022-05-07"
+      abstract:
+        - "Project manager / Lead Project Scientist for novel platform development effort in collaboration with Abbvie.
+        Successfully identified over 5 lead molecules using Peptide-Protein docking which were validated invitro for 
+        affinity and the platform is currently in preclinical study phase."
+        - "Developing a second novel fusion protein based platform for drug re-purposing to exploit a an off target effect."
+        - "Developed new algorithms / pipelines to analyze open source databases containing Microarray, NGS data like 
+        RNA-Seq to determine druggable genes with enrichment analysis / clustering / identifying naive vs. sensitized 
+        populations etc. and creating PSQL databases for easy access Lead in creating a standalone python package and 
+        relational database from scratch with over 1000 times speed improvement over original implementation of the 
+        HR-Algorithm (An algorithm that analyzes gene expression to predict intended effect and off-target toxicities of drugs)
+        (www.historeceptomics.com). Contributed to development of public API endpoint"
+    - title: "Scientist Systems Biology"
+      institution: "Viome Life Sciences"
+      start: "2022-05-09"
+      end: "Present"
+      abstract:
+        - "Contributed to multiple projects developing a code base of highly specialized tools for systems biology pipelines used in Drug Target Discovery"
+        - "Implemented and integrated metadata generation and abstraction strategies for large cohorts in Machine learning pipelines."
+        - "Developed 4+ computational scores for viome’s flagship product and worked in production environment. I also am responsible for maintaining and delivering the production API Endpoint for all consumer scores."
+

@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
-from typing import Any, Optional
 from datetime import datetime
+from typing import Any, Optional
 
 import streamlit as st
 
@@ -78,10 +78,10 @@ def experience_card(data: Optional[dict[str, Any]]) -> None:
         start, end = data.get("start"), data.get("end")
         if end.lower() == "present":
             end = datetime.now()
-            present=True
+            present = True
         else:
             end = datetime.fromisoformat(end)
-            present=False
+            present = False
         start = datetime.fromisoformat(start)
         delta = (end - start).days / 364.25
         st.markdown(f"Experience: {round(delta, 2)} years {'(Present)' if present is True else ''}")
@@ -94,24 +94,24 @@ def experience_card(data: Optional[dict[str, Any]]) -> None:
             for item in abstract:
                 st.write(f"- {item}")
 
+
 def contact_user():
-    if st.session_state.get("submitted") is True:
-        send_message()
-        return
     with st.form("ContactForm"):
         first_name_column, last_name_column = st.columns(2)
         first_name_column.text_input("First Name", key='first_name')
         last_name_column.text_input("Last Name", key='last_name')
         st.text_area("Message", key='contact_message')
         submit_button = st.form_submit_button("Send Message", use_container_width=True)
-        if submit_button:
-            st.session_state['submitted'] = True
+        if submit_button is True:
+            send_message()
+
 
 def send_message():
     first_name = st.session_state.get("first_name")
     last_name = st.session_state.get("last_name")
 
     import yagmail
+    from uuid import uuid4
 
     yag = yagmail.SMTP(st.secrets.get('contact_mail').get("email_address"),
                        st.secrets.get('contact_mail').get("email_password"))
@@ -120,6 +120,10 @@ def send_message():
         "Message",
         st.session_state.get("contact_message")
     ]
-    yag.send(st.secrets.get('contact_mail').get("email_address"), 'Message from HOMEWEBSITE', contents)
+    contents = "\n".join(iter(contents))
+    ticket_id = uuid4()
+    yag.send(st.secrets.get('contact_mail').get("email_address"),
+             f'Message from HOMEWEBSITE ({ticket_id})',
+             contents)
 
     st.info("Message Sent")

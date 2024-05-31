@@ -113,6 +113,7 @@ def send_message():
 
     import yagmail
     from uuid import uuid4
+    from copy import deepcopy
 
     yag = yagmail.SMTP(st.secrets.get('contact_mail').get("email_address"),
                        st.secrets.get('contact_mail').get("email_password"))
@@ -129,9 +130,9 @@ def send_message():
 
     yag.send(st.secrets.get('contact_mail').get("email_address"),
              subject,
-             contents)
+             deepcopy(contents))
     yag.send(st.session_state.get('user_email'),
              subject,
-             "REFERENCE:\n" + contents)
-
+             "REFERENCE:\n" + deepcopy(contents))
+    del contents
     st.info("Message Sent")

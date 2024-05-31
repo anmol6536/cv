@@ -131,11 +131,11 @@ def send_message():
 
     yag.send(st.secrets.get('contact_mail').get("email_address"),
              subject,
-             deepcopy(contents).format(dict(replace_this=replace_this)))
+             deepcopy(contents).format(replace_this=replace_this))
 
     replace_this = "You tried to contact Anmol Gorakshakar"
     yag.send(st.session_state.get('user_email'),
              subject,
-             "REFERENCE:\n" + deepcopy(contents).format(dict(replace_this=replace_this)))
+             "REFERENCE:\n" + deepcopy(contents).format(replace_this=replace_this))
     del contents
     st.info("Message Sent")

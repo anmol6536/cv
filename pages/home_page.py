@@ -100,6 +100,7 @@ def contact_user():
         first_name_column, last_name_column = st.columns(2)
         first_name_column.text_input("First Name", key='first_name')
         last_name_column.text_input("Last Name", key='last_name')
+        your_email = st.text_input("Your Email Address", key="user_email")
         st.text_area("Message", key='contact_message')
         submit_button = st.form_submit_button("Send Message", use_container_width=True)
         if submit_button is True:
@@ -117,7 +118,9 @@ def send_message():
                        st.secrets.get('contact_mail').get("email_password"))
     contents = [
         f"{first_name} {last_name} tried to contact you",
-        "Message",
+        "",
+        f"User E-Mail: {st.session_state.get('user_email')}",
+        "Message:",
         st.session_state.get("contact_message")
     ]
     contents = "\n".join(iter(contents))
@@ -125,5 +128,8 @@ def send_message():
     yag.send(st.secrets.get('contact_mail').get("email_address"),
              f'Message from HOMEWEBSITE ({ticket_id})',
              contents)
+    yag.send(st.session_state.get('user_email'),
+             f'Message from HOMEWEBSITE ({ticket_id})',
+             ["REFERENCE:", contents])
 
     st.info("Message Sent")

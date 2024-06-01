@@ -1,7 +1,8 @@
 from __future__ import absolute_import
 
 from datetime import datetime
-from typing import Any, Optional
+from pathlib import Path
+from typing import Any, Optional, Union
 
 import streamlit as st
 
@@ -96,15 +97,16 @@ def experience_card(data: Optional[dict[str, Any]]) -> None:
 
 
 def contact_user():
-    with st.form("ContactForm"):
+    with (st.sidebar.form("ContactForm")):
+        st.write("Contact Me")
+        if st.session_state.get("submitted") is True:
+            send_message()
         first_name_column, last_name_column = st.columns(2)
         first_name_column.text_input("First Name", key='first_name')
         last_name_column.text_input("Last Name", key='last_name')
-        your_email = st.text_input("Your Email Address", key="user_email")
+        st.text_input("Your Email Address", key="user_email")
         st.text_area("Message", key='contact_message')
-        submit_button = st.form_submit_button("Send Message", use_container_width=True)
-        if submit_button is True:
-            send_message()
+        st.form_submit_button("Send Message", use_container_width=True, on_click=send_message)
 
 
 def send_message():
@@ -127,15 +129,72 @@ def send_message():
     ]
     contents = "\n".join(iter(contents))
     ticket_id = uuid4()
-    subject = f'Message from HOMEWEBSITE ({ticket_id})'
+    subject = f'Message from CV Website ({ticket_id})'
 
     yag.send(st.secrets.get('contact_mail').get("email_address"),
              subject,
              deepcopy(contents).format(replace_this=replace_this))
 
+    subject = f'Thank you for contacting Anmol Gorakshakar (ID: {ticket_id})'
     replace_this = "You tried to contact Anmol Gorakshakar"
-    yag.send(st.session_state.get('user_email'),
-             subject,
-             "REFERENCE:\n" + deepcopy(contents).format(replace_this=replace_this))
+    if st.session_state.get('user_email', None) is not None:
+        yag.send(st.session_state.get('user_email'),
+                 subject,
+                 "REFERENCE:\n" + deepcopy(contents).format(replace_this=replace_this))
     del contents
-    st.info("Message Sent")
+
+    # reset form
+    st.session_state["user_email"] = None
+    st.session_state["first_name"] = None
+    st.session_state["last_name"] = None
+    st.session_state["contact_message"] = None
+    st.sidebar.info("Message Sent")
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+# Image carousel functions
+# def image_carousel():
+#     IMAGES = [i for i in (GlobalPaths.IMAGE_FOLDER / "photography").iterdir() if not i.stem.startswith('.')]
+#     n = 4
+#     columns = st.columns(n)
+#     height_tracker = {col: 0 for col in columns}
+#
+#     for idx, images in enumerate(yielder(IMAGES, n)):
+#         if idx > 2:
+#             break
+#         for (col, _), image in image_column_assigner(height_tracker, images):
+#             col.image(image.__str__())
+#             height_tracker[col] += image_height(image)
+#
+#
+# def image_column_assigner(column_height_dictionary: dict[str, int], images: list[str]):
+#     ordered_images = sorted(images, key=image_height)
+#     columns = sorted(column_height_dictionary.items(), key=lambda x: x[1])
+#     return zip(columns, ordered_images)
+
+
+def image_height(path: Union[str, Path]) -> float:
+    from PIL import Image
+    w, h = Image.open(path).size
+    return h / w
+
+# ----------------------------------------------------------------------------------------------------------------------
+
+
+def image_carousel(top_n: int = None):
+    IMAGES = [i for i in (GlobalPaths.IMAGE_FOLDER / "photography").iterdir() if not i.stem.startswith('.')]
+    if top_n is not None:
+        IMAGES = IMAGES[:top_n]
+    n = 4
+    columns = st.columns(n)
+    height_tracker = {col: 0 for col in columns}
+    for image in IMAGES:
+        col = image_column_assigner_v2(height_tracker)
+        col.image(image.__str__())
+        height_tracker[col] += image_height(image)
+
+
+def image_column_assigner_v2(column_height_dictionary: dict[str, int]) -> st.columns:
+    (column, _), *_ = sorted(column_height_dictionary.items(), key=lambda x: x[1])
+    return column

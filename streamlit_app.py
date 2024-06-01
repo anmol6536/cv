@@ -1,4 +1,4 @@
-from pages.home_page import recent_publications, title_card, experience, contact_user
+from pages.home_page import recent_publications, title_card, experience, contact_user, image_carousel
 from utilities.custom_steamlit_fuctions import width_change
 
 width_change(80)
@@ -9,6 +9,7 @@ def main():
     recent_publications()
     experience()
     contact_user()
+    image_carousel()
 
 if __name__ == '__main__':
     main()

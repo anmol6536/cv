@@ -187,7 +187,8 @@ def image_column_assigner_v2(column_height_dictionary: dict[str, int]) -> st.col
 
 
 def github_showcase():
-    data = get_public_github_data("anmol6536", st.secrets.get("github").get('token'))
+    from json import loads
+    data = loads(GlobalPaths.GITHUB_SHOWCASE_JSON.read_text())
     st.title("Github Showcase")
     n = 3
     columns = st.columns(n)

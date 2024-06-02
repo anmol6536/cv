@@ -1,0 +1,230 @@
+[
+    {
+        "name": "agn",
+        "private": true,
+        "description": "agn notebooks",
+        "size": 6335,
+        "languages": {
+            "Jupyter Notebook": 4227610
+        },
+        "shield_logo": [
+            "jupyter"
+        ],
+        "url": "https://github.com/anmol6536/agn",
+        "created_at": "09-02-2021"
+    },
+    {
+        "name": "algo",
+        "private": true,
+        "description": null,
+        "size": 2,
+        "languages": {
+            "Jupyter Notebook": 7083
+        },
+        "shield_logo": [
+            "jupyter"
+        ],
+        "url": "https://github.com/anmol6536/algo",
+        "created_at": "28-12-2020"
+    },
+    {
+        "name": "binder_project",
+        "private": false,
+        "description": "Binder Project",
+        "size": 16748,
+        "languages": {
+            "Jupyter Notebook": 1146420,
+            "Python": 14009,
+            "Shell": 63
+        },
+        "shield_logo": [
+            "jupyter",
+            "python",
+            "gnubash"
+        ],
+        "url": "https://github.com/anmol6536/binder_project",
+        "created_at": "10-05-2023"
+    },
+    {
+        "name": "cmb_assignment",
+        "private": true,
+        "description": "pooja / anmol collab",
+        "size": 7,
+        "languages": {
+            "Python": 14440
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/cmb_assignment",
+        "created_at": "11-01-2024"
+    },
+    {
+        "name": "covid_tracker",
+        "private": false,
+        "description": "#code testing",
+        "size": 35382,
+        "languages": {
+            "Jupyter Notebook": 2373576
+        },
+        "shield_logo": [
+            "jupyter"
+        ],
+        "url": "https://github.com/anmol6536/covid_tracker",
+        "created_at": "25-05-2020"
+    },
+    {
+        "name": "cython",
+        "private": true,
+        "description": "project to learn cython",
+        "size": 23,
+        "languages": {
+            "Python": 356,
+            "Cython": 59
+        },
+        "shield_logo": [
+            "python",
+            "cython"
+        ],
+        "url": "https://github.com/anmol6536/cython",
+        "created_at": "18-01-2024"
+    },
+    {
+        "name": "data_scrapper",
+        "private": false,
+        "description": null,
+        "size": 263,
+        "languages": {
+            "Python": 12181
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/data_scrapper",
+        "created_at": "29-07-2020"
+    },
+    {
+        "name": "flask_app_nlp",
+        "private": false,
+        "description": "Flask app for for text extraction and Geo database search",
+        "size": 14,
+        "languages": {
+            "HTML": 6588,
+            "Python": 2335,
+            "CSS": 1525
+        },
+        "shield_logo": [
+            "html5",
+            "python",
+            "css3"
+        ],
+        "url": "https://github.com/anmol6536/flask_app_nlp",
+        "created_at": "16-10-2020"
+    },
+    {
+        "name": "homewebsite",
+        "private": false,
+        "description": "CV WEBSITE",
+        "size": 79862,
+        "languages": {
+            "Python": 16847
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/homewebsite",
+        "created_at": "27-10-2022"
+    },
+    {
+        "name": "kegg_api",
+        "private": false,
+        "description": "Kegg API ",
+        "size": 16,
+        "languages": {
+            "Python": 10206
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/kegg_api",
+        "created_at": "31-05-2023"
+    },
+    {
+        "name": "machine_learning",
+        "private": false,
+        "description": "Crash course Dec 2021 Machine learning ",
+        "size": 8647,
+        "languages": {
+            "Jupyter Notebook": 8936910,
+            "Python": 1163
+        },
+        "shield_logo": [
+            "jupyter",
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/machine_learning",
+        "created_at": "22-12-2021"
+    },
+    {
+        "name": "photography_utils",
+        "private": false,
+        "description": "Miscellaneous utilities for file handling ",
+        "size": 2,
+        "languages": {
+            "Python": 2227
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/photography_utils",
+        "created_at": "21-03-2023"
+    },
+    {
+        "name": "project_ideas",
+        "private": false,
+        "description": null,
+        "size": 8888,
+        "languages": {
+            "Jupyter Notebook": 135376,
+            "Python": 43307,
+            "HTML": 2761
+        },
+        "shield_logo": [
+            "jupyter",
+            "python",
+            "html5"
+        ],
+        "url": "https://github.com/anmol6536/project_ideas",
+        "created_at": "21-07-2021"
+    },
+    {
+        "name": "scopus_data_retrieval",
+        "private": false,
+        "description": "Custom code to pull data from SCOPUS using SCIENCE  DIRECT API",
+        "size": 2290,
+        "languages": {
+            "Jupyter Notebook": 2503137,
+            "Python": 3793
+        },
+        "shield_logo": [
+            "jupyter",
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/scopus_data_retrieval",
+        "created_at": "13-07-2020"
+    },
+    {
+        "name": "scratch_tools",
+        "private": false,
+        "description": null,
+        "size": 10,
+        "languages": {
+            "Python": 5969
+        },
+        "shield_logo": [
+            "python"
+        ],
+        "url": "https://github.com/anmol6536/scratch_tools",
+        "created_at": "05-06-2023"
+    }
+]

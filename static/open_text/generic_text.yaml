@@ -17,11 +17,15 @@ personal_info:
     - "Genomics"
     - "Metagenomics"
   profile_urls:
-    - github: "https://github.com/anmol6536"
-    - linkedin: "https://www.linkedin.com/in/anmol-gorakshakar/"
-    - facebook: null
-    - twitter: null
-    - instagram: null
+    - name: "github"
+      user_url: "https://github.com/anmol6536"
+      logo_url: "https://img.shields.io/badge/Github-000000.svg?logo=github&logoColor=ffffff&style=for-the-badge"
+    - name: "linkedin"
+      user_url: "https://www.linkedin.com/in/anmol-gorakshakar/"
+      logo_url: "https://img.shields.io/badge/linkedin-000000.svg?logo=linkedin&logoColor=ffffff&style=for-the-badge"
+    - name: "instagram"
+      logo_url: "https://img.shields.io/badge/instagram-000000.svg?logo=instagram&logoColor=ffffff&style=for-the-badge"
+      user_url: "https://www.instagram.com/anmol_gorakshakar_photography/"
   contact: "+1 646-643-6745"
   short_bio: "I am a Scientist and Python developer with over four years of programming and three years of molecular biology experience.
    My expertise are in fields of computational biology, early drug discovery, biomarker discovery, and high throughput data analysis, knowledge-base creation.

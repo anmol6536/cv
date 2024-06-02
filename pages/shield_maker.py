@@ -90,3 +90,5 @@ def sanitize_label(label:str) -> str:
     label = label.replace(' ', '_')
     label = label.replace('_', '__')
     return label
+
+shield_maker_form()

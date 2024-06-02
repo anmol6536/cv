@@ -3149,4 +3149,7 @@ logos:
   - Zsh: zsh
   - Zulip: zulip
   - Zyte: zyte
-
+style:
+  - flat
+  - plastic
+  - for-the-badge
